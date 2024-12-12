@@ -46,4 +46,30 @@ if submit:
         flow_df['date'] = flow_df['EVENT_TIME'].dt.date
 
         st.dataframe(flow_df)
-        st.line_chart(flow_df.groupby('date').size())
+
+
+
+
+
+
+
+
+
+
+
+
+        
+# st.subheader("Game Analysis")
+# games_df = session.table('dim_games').to_pandas()
+
+# a1,a2 = st.columns(2)
+# gimi = a1.selectbox("game",games_df['GAME'].unique())
+# a2.slider("Stage", min_value=1, max_value=10)
+# if st.button("Send"):
+#     filtered_df = games_df[games_df['GAME'] == gimi]
+#     snowpark_df = session.create_dataframe(filtered_df)
+
+#     st.dataframe(filtered_df)
+#     snowpark_df.write.save_as_table("abc", mode="overwrite")
+
+#     st.success("Data was updated")
